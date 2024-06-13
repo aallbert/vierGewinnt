@@ -4,10 +4,11 @@
 
 class Grid {
 private:
-    int grid [7][6];
-
+    int grid [7][6] = {0};
+    int playerTurn;
 public:
-    Grid(){};
+    Grid()
+    :playerTurn(1){};
     int ** getGrid();
     bool checkForWin();
     void handleMovePos(int pos);
